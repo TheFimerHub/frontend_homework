@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+h1 {
+  color: rgb(32, 32, 39);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+}
+
+h3 {
+  color: rgb(32, 32, 39);
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 39px;
+}
+
+p {
+  color: rgb(32, 32, 39);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+}
+
+p span {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+.center {
+  padding-left: calc(50% - 600px);
+  padding-right: calc(50% - 600px);
+}
+
+.top {
+  height: 800px;
+  background-color: rgb(225, 255, 143);
+}
+.top__h1 {
+  padding-top: 196px;
+}
+.top__p {
+  margin-top: 24px;
+}
+.top__btn {
+  display: block;
+  margin-top: 48px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 247px;
+  box-sizing: border-box;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.top__btn:hover {
+  margin-top: 48px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 247px;
+  box-sizing: border-box;
+  border: 1px solid rgb(32, 32, 39);
+  border-radius: 60px;
+  background: rgb(255, 255, 255);
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  text-align: center;
+}
+
+.dec-elements__star {
+  position: absolute;
+}
+.dec-elements__star_1 {
+  top: 63px;
+  left: calc(50% - 564px);
+}
+.dec-elements__star_2 {
+  top: 94px;
+  left: calc(50% - 657px);
+}
+.dec-elements__star_3 {
+  top: 568px;
+  right: calc(50% - 376px);
+}
+.dec-elements__star_4 {
+  top: 538px;
+  right: calc(50% - 265px);
+}
+.dec-elements__star_5 {
+  top: -268px;
+  right: calc(50% - 1120px);
+}
+.dec-elements__star_6 {
+  top: 877px;
+  left: calc(50% + 300px);
+}
+.dec-elements__star_7 {
+  top: 1570px;
+  left: calc(50% - 695px);
+}
+.dec-elements__star_8 {
+  top: 1622px;
+  left: calc(50% - 680px);
+}
+.dec-elements__triangle {
+  position: absolute;
+  right: calc(50% - 607px);
+  top: 468px;
+}
+.dec-elements__lines {
+  position: absolute;
+  right: calc(50% - 725px);
+  top: -10px;
+}
+
+.move-bar {
+  display: flex;
+  position: absolute;
+  top: 710px;
+  align-items: center;
+  gap: 51px;
+  padding-left: 49px;
+  padding-right: 49px;
+  height: 90px;
+  background-color: rgb(188, 236, 48);
+}
+.move-bar__text {
+  color: rgb(32, 32, 39);
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+  letter-spacing: 4%;
+  text-align: left;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.about {
+  height: 1470px;
+  background-color: rgb(32, 32, 39);
+}
+.about__h1 {
+  padding-top: 94px;
+  color: rgb(255, 255, 255);
+}
+.about__p {
+  margin-top: 24px;
+  color: rgb(255, 255, 255);
+}
+
+.cards {
+  position: absolute;
+  z-index: 1;
+  margin-top: 72px;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.cards__col {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.card {
+  width: 378.6666666667px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
+}
+.card__img {
+  size: cover;
+  border-radius: 30px;
+  height: 314px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card__img_1 {
+  background-image: url("/img/card_cover_1.png");
+}
+.card__img_2 {
+  background-image: url("/img/card_cover_2.png");
+}
+.card__img_3 {
+  background-image: url("/img/card_cover_3.png");
+}
+.card__img_4 {
+  background-image: url("/img/card_cover_4.png");
+}
+.card__img_5 {
+  background-image: url("/img/card_cover_5.png");
+}
+.card__img_6 {
+  background-image: url("/img/card_cover_6.png");
+}
+.card__info {
+  padding: 32px;
+}
+.card__ground {
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  padding-top: 8px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  text-align: center;
+  width: 108px;
+  border-radius: 52.58px;
+  background: rgb(247, 247, 247);
+}
+.card__name {
+  margin-top: 16px;
+}/*# sourceMappingURL=style.css.map */
