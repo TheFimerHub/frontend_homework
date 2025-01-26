@@ -18,11 +18,13 @@
                 <br>на мой сайт мини-игр</h1>
             <p class="top__p">Тебе предстоит пройти несколько увлекательных игр.
             <br> Если готов, нажимай <span>«Поехали!»</span> и <span>приступай</span>.</p>
+            <p class="top__p top__p_mob">Тебе предстоит пройти несколько увлекательных игр.
+                Если готов, нажимай <span>«Поехали!»</span> и <span>приступай</span>.</p>
             <a href="#about" class="top__btn">Поехали!</a>
         </div>
         <div class="dec-elements">
-            <img src="/img/star_1.svg" alt="Element" class="dec-elements__star dec-elements__star_1">
-            <img src="/img/star_2.svg" alt="Element" class="dec-elements__star dec-elements__star_2">
+            <img src="/img/star_1.svg" alt="Декоративная звезда" class="dec-elements__star dec-elements__star_1" aria-label="Декоративный элемент">
+            <img src="/img/star_2.svg" alt="Декоративная звезда" class="dec-elements__star dec-elements__star_2" aria-label="Декоративный элемент">
             <img src="/img/star_3.svg" alt="Element" class="dec-elements__star dec-elements__star_3">
             <img src="/img/star_4.svg" alt="Element" class="dec-elements__star dec-elements__star_4">
             <img src="/img/star_5.svg" alt="Element" class="dec-elements__star dec-elements__star_5">
@@ -70,21 +72,24 @@
     </main>
     <section id="about" class="about center">
         <h1 class="about__h1">Об играх</h1>
-        <p class="about__p">
+        <h1 class="about__h1 about__h1_mob">Мини-игры</h1>
+        <p class="about__p about__p_mob">
             В моей коллекции представлено 6 игр на разные темы.
             <br>Игры несложные — в них может поиграть каждый.
             <br>Все игры доступны для пользования.
         </p>
         <div class="cards">
             <div class="cards__col">
-                <a href="#" class="card">
+                <div href="#" class="card">
                     <div class="card__img card__img_1"></div>
                     <div class="card__info">
                         <h4 class="card__ground">Игра №1</h4>
                         <h3 class="card__name">Угадай число</h3>
+                        <p class="card__p">Попробуй угадать случайное число от 1 до 100.</p>
+                        <a href="/game/1" class="card__btn">Играть!</a>
                     </div>
-                </a>
-                <a href="#" class="card">
+                </div>
+                <div href="#" class="card">
                     <div class="card__img card__img_4"></div>
                     <div class="card__info">
                         <h4 class="card__ground">Игра №4</h4>
@@ -92,41 +97,50 @@
                             Камень, 
                             ножницы,
                             <br>бумага</h3>
+                        <p class="card__p">Сыграй в популярную игру против компьютера.</p>
+                        <a href="/game/1" class="card__btn">Играть!</a>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="cards__col">
-                <a href="#" class="card">
+                <div class="card">
                     <div class="card__img card__img_2"></div>
                     <div class="card__info">
                         <h4 class="card__ground">Игра №2</h4>
                         <h3 class="card__name">Простая арифметика</h3>
+                        <p class="card__p">Попробуй решить простые арифметические задачи.</p>
+                        <a href="/game/2" class="card__btn">Играть!</a>
                     </div>
-                </a>
-                <a href="#" class="card">
+                </div>
+                <div class="card">
                     <div class="card__img card__img_5"></div>
                     <div class="card__info">
                         <h4 class="card__ground">Игра №5</h4>
-                        <h3 class="card__name">
-                            Простая викторина</h3>
+                        <h3 class="card__name">Простая викторина</h3>
+                        <p class="card__p">Отвечай на вопросы викторины с вариантами ответов.</p>
+                        <a href="/game/5" class="card__btn">Играть!</a>
                     </div>
-                </a>
+                </div>
             </div>
             <div class="cards__col">
-                <a href="#" class="card">
+                <div class="card">
                     <div class="card__img card__img_3"></div>
                     <div class="card__info">
                         <h4 class="card__ground">Игра №3</h4>
                         <h3 class="card__name">Переверни текст</h3>
+                        <p class="card__p">Попробуй ввести текст, который будет перевернут.</p>
+                        <a href="/game/3" class="card__btn">Играть!</a>
                     </div>
-                </a>
-                <a href="#" class="card">
+                </div>
+                <div class="card">
                     <div class="card__img card__img_6"></div>
                     <div class="card__info">
                         <h4 class="card__ground">Игра №6</h4>
-                        <h3 class="card__name">Генератор случайныхх цветов</h3>
+                        <h3 class="card__name">Генератор случайных цветов</h3>
+                        <p class="card__p">Игра, в которой при клике  на кнопку фон страницы меняется на случайный.</p>
+                        <a href="/game/6" class="card__btn">Играть!</a>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
         <div class="dec-elements">
@@ -135,5 +149,9 @@
             <img src="/img/star_8.svg" class="dec-elements__star dec-elements__star_8" alt="Element">
         </div>
     </section>
+    <footer class="footer">
+        <p class="footer__p">Все права защищены.</p>
+    </footer>
+    <script src="./js/tasks.js"></script>
 </body>
 </html>

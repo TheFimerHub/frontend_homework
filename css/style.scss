@@ -57,6 +57,10 @@ a {
 
     &__p {
         margin-top: 24px;
+
+        &_mob {
+            display: none;
+        }
     }
 
     &__btn {
@@ -84,23 +88,9 @@ a {
     }
 
     &__btn:hover {
-        margin-top: 48px;
-
-        padding-top: 16px;
-        padding-bottom: 16px;
-        width: 247px;
-
-        box-sizing: border-box;
         border: 1px solid rgb(32, 32, 39);
-        border-radius: 60px;
-        background: rgb(255, 255, 255);
-
         color: rgb(32, 32, 39);
-        font-family: Montserrat;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 141.69%;
-        text-align: center;
+        background: rgb(255, 255, 255);
     }
 }
 
@@ -126,7 +116,7 @@ a {
         &_4 {
             top: 538px;
             right: calc(50% - 265px);
-        }
+        }    
 
         &_5 {
             top: -268px;
@@ -196,11 +186,19 @@ a {
     &__h1 {
         padding-top: 94px;
         color: rgb(255, 255, 255);
+
+        &_mob {
+            display: none;
+        }
     }
 
     &__p {
         margin-top: 24px;
         color: rgb(255, 255, 255);
+
+        &_mob {
+            display: none;
+        }
     }
 }
 
@@ -220,13 +218,12 @@ a {
 }
 
 .card {
-    width: calc(($display_width - 64px) / 3);
     background-color: rgb(255, 255, 255);
+    width: calc(($display_width - 64px) / 3);
     border-radius: 30px;
     box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
 
     &__img {
-        size: cover;
         border-radius: 30px;
         height: 314px;
         background-repeat: no-repeat;
@@ -263,7 +260,7 @@ a {
 
     &__ground {
         color: rgba(0, 0, 0);
-        font-size: 16px;
+        font-size: 16px;  
         padding-top: 8px;
         font-weight: 500;
         padding-bottom: 10px;
@@ -276,4 +273,26 @@ a {
     &__name {
         margin-top: 16px;
     }
+
+    &__p, &__btn {
+        display: none;
+    }
 }
+
+.footer {
+    background-color: rgb(189, 237, 53);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__p {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        text-align: center;
+
+    }
+}
+
+@import "mob.scss";
