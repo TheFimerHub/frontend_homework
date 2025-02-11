@@ -163,9 +163,6 @@ a {
   margin-top: 24px;
   color: rgb(255, 255, 255);
 }
-.about__p_mob {
-  display: none;
-}
 
 .cards {
   position: absolute;
@@ -304,22 +301,7 @@ a {
     height: 19.34px;
   }
   .about {
-    padding-top: 48px;
-    height: 3740px;
-  }
-  .about__h1 {
     display: none;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
-  }
-  .about__h1_mob {
-    display: inline;
-  }
-  .about__p {
-    font-size: 14px;
-    line-height: 22px;
-    text-align: center;
   }
   .cards {
     display: flex;
@@ -351,6 +333,12 @@ a {
     margin-top: 16px;
     font-size: 16px;
     line-height: 20px;
+  }
+  .card__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
   }
   .card__btn {
     display: block;

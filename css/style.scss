@@ -195,10 +195,6 @@ a {
     &__p {
         margin-top: 24px;
         color: rgb(255, 255, 255);
-
-        &_mob {
-            display: none;
-        }
     }
 }
 
@@ -295,4 +291,4 @@ a {
     }
 }
 
-@import "mob.scss";
+@import "_mob.scss";
