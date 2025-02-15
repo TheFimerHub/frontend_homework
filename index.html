@@ -14,13 +14,14 @@
 <body>
     <main>
         <div class="top center">
-            <h1 class="top__h1">Добро пожаловать 
+            <h1 class="top__title">Добро пожаловать 
                 <br>на мой сайт мини-игр</h1>
-            <p class="top__p">Тебе предстоит пройти несколько увлекательных игр.
+            <p class="top__p">Тебе предстоит пройти несолько увлекательных игр.
             <br> Если готов, нажимай <span>«Поехали!»</span> и <span>приступай</span>.</p>
             <p class="top__p top__p_mob">Тебе предстоит пройти несколько увлекательных игр.
                 Если готов, нажимай <span>«Поехали!»</span> и <span>приступай</span>.</p>
-            <a href="#about" class="top__btn">Поехали!</a>
+                <a href="#about" class="top__btn top__btn_desktop">Поехали!</a>
+                <a href="#mgames" class="top__btn top__btn_mobile">Поехали!</a>
         </div>
         <div class="dec-elements">
             <img src="/img/star_1.svg" alt="Декоративная звезда" class="dec-elements__star dec-elements__star_1" aria-label="Декоративный элемент">
@@ -71,8 +72,8 @@
         </div>
     </main>
     <section id="about" class="about center">
-        <h1 class="about__h1">Об играх</h1>
-        <h1 class="about__h1 about__h1_mob">Мини-игры</h1>
+        <h1 class="about__title">Об играх</h1>
+        <h1 class="about__title about__title_mob">Мини-игры</h1>
         <p class="about__p about__p_mob">
             В моей коллекции представлено 6 игр на разные темы.
             <br>Игры несложные — в них может поиграть каждый.
@@ -147,8 +148,8 @@
             <img src="/img/star_8.svg" class="dec-elements__star dec-elements__star_8" alt="Element">
         </div>
     </section>
-    <section class="mgames center">
-        <h1 class="mgames__h1">Мини-игры</h1>
+    <section id="mgames" class="mgames center">
+        <h1 class="mgames__title">Мини-игры</h1>
         <div class="cards-long">
             <article id="game1" class="card-long">
                 <div class="card-long__content">
@@ -213,12 +214,12 @@
         </div>
         <div class="dec-elements">
             <img src="/img/stars_up.svg" class="dec-elements__star dec-elements__star_9" alt="Element">
-            <img src="/img/stars_down.svg" class="dec-elements__star dec-elements__star_10" alt="Element">>
+            <img src="/img/stars_down.svg" class="dec-elements__star dec-elements__star_10" alt="Element">
         </div>
     </section>
     <footer class="footer">
         <p class="footer__p">Все права защищены.</p>
     </footer>
-    <!-- <script src="./js/tasks2.js"></script> -->
+    <script src="./js/tasks3.js"></script>
 </body>
 </html>

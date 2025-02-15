@@ -90,7 +90,7 @@ a {
 
     background-color: rgb(225, 255, 143);
     
-    &__h1 {
+    &__title {
         padding-top: 196px;
     }
 
@@ -115,6 +115,10 @@ a {
         border: 1px solid rgb(32, 32, 39);
         color: rgb(32, 32, 39);
         background: rgb(255, 255, 255);
+    }
+
+    &__btn_mobile {
+        display: none;
     }
 }
 
@@ -217,7 +221,7 @@ a {
     height: 1470px;
     background-color: rgb(32, 32, 39);
 
-    &__h1 {
+    &__title {
         padding-top: 94px;
         color: rgb(255, 255, 255);
 
@@ -236,7 +240,7 @@ a {
     height: 3500px;
     background-color: rgb(32, 32, 39);
 
-    &__h1 {
+    &__title {
         padding-top: 46px;
         color: rgb(255, 255, 255);
     }
@@ -285,11 +289,7 @@ a {
         @include image-base;
         height: 314px;
 
-        @for $i from 1 through 6 {
-            &_#{$i} {
-                background-image: url("/img/card_cover_#{$i}.png");
-            }
-        }
+        @include image-numbering
     }
 
     &__info {
@@ -332,11 +332,7 @@ a {
         height: 500px;
         width: 100%;
 
-        @for $i from 1 through 6 {
-            &_#{$i} {
-                background-image: url("/img/card_cover_#{$i}.png");
-            }
-        }
+        @include image-numbering
     }
 
     &__content {
