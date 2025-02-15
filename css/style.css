@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -57,21 +58,21 @@ a {
 }
 .top__btn {
   display: block;
-  margin-top: 48px;
   padding-top: 16px;
   padding-bottom: 16px;
-  width: 247px;
   box-sizing: border-box;
   border: 1px solid rgb(32, 32, 39);
   border-radius: 60px;
-  background: rgb(32, 32, 39);
-  color: rgb(255, 255, 255);
   font-family: Montserrat;
-  font-size: 24px;
   font-weight: 600;
   line-height: 141.69%;
   text-align: center;
   transition: all 0.3s ease-in-out;
+  width: 247px;
+  margin-top: 48px;
+  background: rgb(32, 32, 39);
+  color: rgb(255, 255, 255);
+  font-size: 24px;
 }
 .top__btn:hover {
   border: 1px solid rgb(32, 32, 39);
@@ -212,23 +213,15 @@ a {
 
 .card {
   background-color: rgb(255, 255, 255);
-  width: 378.6666666667px;
   border-radius: 30px;
   box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
-}
-.card__content {
-  display: flex;
-  flex-direction: row;
+  width: 378.6666666667px;
 }
 .card__img {
   border-radius: 30px;
-  height: 314px;
   background-repeat: no-repeat;
   background-size: cover;
-}
-.card__img_long {
-  height: 500px;
-  width: 50%;
+  height: 314px;
 }
 .card__img_1 {
   background-image: url("/img/card_cover_1.png");
@@ -249,7 +242,11 @@ a {
   background-image: url("/img/card_cover_6.png");
 }
 .card__info {
-  padding: 32px;
+  margin: 32px;
+}
+.card__content {
+  display: flex;
+  flex-direction: row;
 }
 .card__ground {
   color: rgb(0, 0, 0);
@@ -273,16 +270,15 @@ a {
   width: 100%;
   height: 500px;
 }
-.card-long__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.card-long__info {
+  margin: 48px;
 }
 .card-long__img {
   border-radius: 30px;
-  height: 500px;
-  width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 500px;
+  width: 100%;
 }
 .card-long__img_1 {
   background-image: url("/img/card_cover_1.png");
@@ -302,8 +298,9 @@ a {
 .card-long__img_6 {
   background-image: url("/img/card_cover_6.png");
 }
-.card-long__info {
-  padding: 48px;
+.card-long__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 .card-long__name {
   font-size: 48px;
@@ -335,6 +332,26 @@ a {
   border: 1px solid rgb(32, 32, 39);
   color: rgb(32, 32, 39);
   background: rgb(255, 255, 255);
+}
+
+/* Для нечетных карточек */
+.card-long:nth-child(odd) .card-long__info {
+  grid-column: span 1;
+  grid-row: 1;
+}
+.card-long:nth-child(odd) .card-long__img {
+  grid-column: 2/3;
+  grid-row: 1;
+}
+
+/* Для четных карточек */
+.card-long:nth-child(even) .card-long__info {
+  grid-column: 2/3;
+  grid-row: 1;
+}
+.card-long:nth-child(even) .card-long__img {
+  grid-column: span 1;
+  grid-row: 1;
 }
 
 .footer {
