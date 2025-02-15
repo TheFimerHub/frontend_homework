@@ -1,3 +1,38 @@
+// Миксины для повторяющихся стилей
+@mixin button-base {
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    font-family: Montserrat;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin card-base {
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
+}
+
+@mixin image-base {
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin image-numbering {
+    @for $i from 1 through 6 {
+        &_#{$i} {
+            background-image: url("/img/card_cover_#{$i}.png");
+        }
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,11 +40,15 @@
 
 $display_width: 1200px;
 
-body {
-    font-family: "Montserrat", 
-    sans-serif;
-    overflow-x: hidden;
+// Переменные для цветов
+$primary-color: rgb(32, 32, 39);
+$accent-color: rgb(225, 255, 143);
+$white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
 
+body {
+    font-family: "Montserrat", sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -64,27 +103,12 @@ a {
     }
 
     &__btn {
-        display: block;
-
-        margin-top: 48px;
-
-        padding-top: 16px;
-        padding-bottom: 16px;
+        @include button-base;
         width: 247px;
-
-        box-sizing: border-box;
-        border: 1px solid rgb(32, 32, 39);
-        border-radius: 60px;
+        margin-top: 48px;
         background: rgb(32, 32, 39);
-
         color: rgb(255, 255, 255);
-        font-family: Montserrat;
         font-size: 24px;
-        font-weight: 600;
-        line-height: 141.69%;
-        text-align: center;
-        transition: all 0.3s ease-in-out;
-
     }
 
     &__btn:hover {
@@ -137,6 +161,16 @@ a {
             top: 1622px;
             left: calc(50% - 680px);
         }
+
+        &_9 {
+            top: 2363px;
+            left: calc(50% + 577px);
+        }
+
+        &_10 {
+            top: 5637px;
+            left: calc(50% + 559px);
+        }
     }
 
     &__triangle {
@@ -172,7 +206,7 @@ a {
         font-size: 30px;
         font-weight: 700;
         line-height: 110%;
-        letter-spacing: 4%;
+        letter-spacing: 0.04em;
         text-align: left;
         text-transform: uppercase;
         white-space: nowrap;
@@ -194,64 +228,77 @@ a {
 
     &__p {
         margin-top: 24px;
+        color: #ffffff;
+    }
+}
+
+.mgames {
+    height: 3500px;
+    background-color: rgb(32, 32, 39);
+
+    &__h1 {
+        padding-top: 46px;
         color: rgb(255, 255, 255);
+    }
+
+    &__p {
+        margin-top: 24px;
+        color: #ffffff;
     }
 }
 
 .cards {
+    margin-top: 72px;
+
     position: absolute;
     z-index: 1;
-    margin-top: 72px;
+    
     display: flex;
     flex-direction: row;
     gap: 32px;
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
 }
 
-.cards__col {
+.cards-long {
+    margin-top: 72px;
+    width: 100%;
+    max-width: $display_width;
+
+    position: absolute;
+    z-index: 1;
+
     display: flex;
     flex-direction: column;
-    row-gap: 32px;
+    gap: 32px;    
 }
 
 .card {
-    background-color: rgb(255, 255, 255);
+    @include card-base;
     width: calc(($display_width - 64px) / 3);
-    border-radius: 30px;
-    box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
-
+    
     &__img {
-        border-radius: 30px;
+        @include image-base;
         height: 314px;
-        background-repeat: no-repeat;
-        background-size: cover;
 
-        &_1 {
-            background-image: url("/img/card_cover_1.png");
-        }
-
-        &_2 {
-            background-image: url("/img/card_cover_2.png");
-        }
-
-        &_3 {
-            background-image: url("/img/card_cover_3.png");
-        }
-
-        &_4 {
-            background-image: url("/img/card_cover_4.png");
-        }
-
-        &_5 {
-            background-image: url("/img/card_cover_5.png");
-        }
-
-        &_6 {
-            background-image: url("/img/card_cover_6.png");
+        @for $i from 1 through 6 {
+            &_#{$i} {
+                background-image: url("/img/card_cover_#{$i}.png");
+            }
         }
     }
 
     &__info {
-        padding: 32px;
+        margin: 32px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: row;
     }
 
     &__ground {
@@ -269,9 +316,96 @@ a {
     &__name {
         margin-top: 16px;
     }
+}
 
-    &__p, &__btn {
-        display: none;
+.card-long {
+    @include card-base;
+    width: 100%;
+    height: 500px;
+    
+    &__info {
+        margin: 48px;
+    }
+
+    &__img {
+        @include image-base;
+        height: 500px;
+        width: 100%;
+
+        @for $i from 1 through 6 {
+            &_#{$i} {
+                background-image: url("/img/card_cover_#{$i}.png");
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    &__name {
+        font-size: 48px;
+        line-height: 59px;
+    }
+
+    &__p {
+        margin-top: 24px;
+        font-size: 24px;
+    }
+
+    &__btn {
+        display: block;
+
+        width: 247px;
+        margin-top: 32px;
+
+        padding-top: 16px;
+        padding-bottom: 16px;
+        
+        box-sizing: border-box;
+        border: 1px solid rgb(32, 32, 39);
+        border-radius: 60px;
+        background: rgb(32, 32, 39);
+        
+        color: rgb(255, 255, 255);
+        font-family: Montserrat;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 141.69%;
+        text-align: center;
+        transition: all 0.3s ease-in-out;
+
+    }
+
+    &__btn:hover {
+        border: 1px solid rgb(32, 32, 39);
+        color: rgb(32, 32, 39);
+        background: rgb(255, 255, 255);
+    }
+}
+
+/* Для нечетных карточек */
+.card-long:nth-child(odd) {
+    .card-long__info {
+        grid-column: span 1;
+        grid-row: 1;
+    }
+    .card-long__img {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+}
+
+/* Для четных карточек */
+.card-long:nth-child(even) {
+    .card-long__info {
+        grid-column: 2 / 3;
+        grid-row: 1;
+    }
+    .card-long__img {
+        grid-column: span 1;
+        grid-row: 1;
     }
 }
 

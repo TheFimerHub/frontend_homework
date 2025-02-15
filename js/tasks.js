@@ -1,15 +1,18 @@
-alert('task 1')
-let a = 10;
-alert(a);
-a = 20;
-alert(a);
+// Task 1 - Variables
+alert('task 1');
+let num = 10;
+alert(num);
+num = 20;
+alert(num);
 
-alert('task 2')
-let releaseIphone = 2007;
+// Task 2 - Constants
+alert('task 2');
+const releaseIphone = 2007;
 alert(releaseIphone);
 
-alert('task 3')
-let creatorName = 'Brendan Eich';
+// Task 3 - Strings
+alert('task 3');
+const creatorName = 'Brendan Eich';
 alert(creatorName);
 
 alert('task 4')
@@ -25,12 +28,12 @@ let result = 2 ** 5;
 alert(result);
 
 alert('task 6')
-a = 9;
-b = 2;
-alert(a % b);
+let a = 9;
+let d = 2;
+alert(a % d);
 
 alert('task 7')
-let num = 1;
+num = 1;
 num += 5;
 num -= 3;
 num *= 7;
