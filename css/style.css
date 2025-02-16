@@ -47,7 +47,7 @@ a {
   height: 800px;
   background-color: rgb(225, 255, 143);
 }
-.top__h1 {
+.top__title {
   padding-top: 196px;
 }
 .top__p {
@@ -78,6 +78,9 @@ a {
   border: 1px solid rgb(32, 32, 39);
   color: rgb(32, 32, 39);
   background: rgb(255, 255, 255);
+}
+.top__btn_mobile {
+  display: none;
 }
 
 .dec-elements__star {
@@ -161,11 +164,11 @@ a {
   height: 1470px;
   background-color: rgb(32, 32, 39);
 }
-.about__h1 {
+.about__title {
   padding-top: 94px;
   color: rgb(255, 255, 255);
 }
-.about__h1_mob {
+.about__title_mob {
   display: none;
 }
 .about__p {
@@ -177,7 +180,7 @@ a {
   height: 3500px;
   background-color: rgb(32, 32, 39);
 }
-.mgames__h1 {
+.mgames__title {
   padding-top: 46px;
   color: rgb(255, 255, 255);
 }
@@ -388,7 +391,7 @@ a {
     text-align: center;
     height: 700px;
   }
-  .top__h1 {
+  .top__title {
     padding-top: 147px;
     color: rgb(32, 32, 39);
     font-size: 40px;
@@ -405,7 +408,11 @@ a {
   .top__p_mob {
     display: inline;
   }
-  .top__btn {
+  .top__btn_desktop {
+    display: none;
+  }
+  .top__btn_mobile {
+    display: block;
     width: 285px;
     font-size: 16px;
     margin-top: 32px;
@@ -536,7 +543,72 @@ a {
     display: none;
   }
   .mgames {
+    height: 3740px;
+  }
+  .mgames__title {
+    font-size: 40px;
+    line-height: 49px;
+    padding-top: 46px;
+  }
+  .mgames .dec-elements {
     display: none;
+  }
+  .cards-long {
+    margin-top: 48px;
+    width: calc(100% - 32px);
+    gap: 24px;
+  }
+  .card-long {
+    width: 100%;
+    height: inherit;
+  }
+  .card-long__info {
+    margin: 29px;
+    margin-bottom: 32px;
+  }
+  .card-long__img {
+    border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 285px;
+    width: 100%;
+  }
+  .card-long__img_1 {
+    background-image: url("/img/card_cover_1.png");
+  }
+  .card-long__img_2 {
+    background-image: url("/img/card_cover_2.png");
+  }
+  .card-long__img_3 {
+    background-image: url("/img/card_cover_3.png");
+  }
+  .card-long__img_4 {
+    background-image: url("/img/card_cover_4.png");
+  }
+  .card-long__img_5 {
+    background-image: url("/img/card_cover_5.png");
+  }
+  .card-long__img_6 {
+    background-image: url("/img/card_cover_6.png");
+  }
+  .card-long__content {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .card-long__name {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .card-long__p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 16px;
+  }
+  .card-long__btn {
+    width: 100%;
+    margin-top: 32px;
+    font-size: 16px;
   }
   .footer {
     background-color: rgb(189, 237, 53);
