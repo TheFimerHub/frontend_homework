@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 // Миксины для повторяющихся стилей
 @mixin button-base {
     display: block;
@@ -194,13 +198,6 @@ a {
     display: flex;
     position: absolute;
     top: 710px;
-
-    align-items: center;
-    gap: 51px;
-
-    padding-left: 49px;
-    padding-right: 49px;
-
     height: 90px;
     background-color: rgb(188, 236, 48);
 
@@ -214,6 +211,22 @@ a {
         text-align: left;
         text-transform: uppercase;
         white-space: nowrap;
+    }
+
+    &__content {
+        display: flex;
+        align-items: center;
+        gap: 51px;
+        animation: scroll 30s linear infinite;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); // Прокрутка на половину ширины
     }
 }
 
@@ -284,6 +297,8 @@ a {
 .card {
     @include card-base;
     width: calc(($display_width - 64px) / 3);
+    transition: all 0.3s ease-in-out;
+
     
     &__img {
         @include image-base;
@@ -316,6 +331,12 @@ a {
     &__name {
         margin-top: 16px;
     }
+}
+
+.card:hover {
+    transform: scale(1.09);
+    margin-top: 6px;
+    margin-bottom: 6px;
 }
 
 .card-long {
@@ -379,6 +400,8 @@ a {
         color: rgb(32, 32, 39);
         background: rgb(255, 255, 255);
     }
+
+    scroll-margin-top: 250px;
 }
 
 /* Для нечетных карточек */
