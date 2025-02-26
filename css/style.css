@@ -1,4 +1,8 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -141,10 +145,6 @@ a {
   display: flex;
   position: absolute;
   top: 710px;
-  align-items: center;
-  gap: 51px;
-  padding-left: 49px;
-  padding-right: 49px;
   height: 90px;
   background-color: rgb(188, 236, 48);
 }
@@ -159,7 +159,21 @@ a {
   text-transform: uppercase;
   white-space: nowrap;
 }
+.move-bar__content {
+  display: flex;
+  align-items: center;
+  gap: 51px;
+  animation: scroll 30s linear infinite;
+}
 
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 .about {
   height: 1470px;
   background-color: rgb(32, 32, 39);
@@ -219,6 +233,7 @@ a {
   border-radius: 30px;
   box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
   width: 378.6666666667px;
+  transition: all 0.3s ease-in-out;
 }
 .card__img {
   border-radius: 30px;
@@ -266,12 +281,19 @@ a {
   margin-top: 16px;
 }
 
+.card:hover {
+  transform: scale(1.09);
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
 .card-long {
   background-color: rgb(255, 255, 255);
   border-radius: 30px;
   box-shadow: 0px 12.61px 42.25px -7.57px rgba(0, 0, 0, 0.13);
   width: 100%;
   height: 500px;
+  scroll-margin-top: 250px;
 }
 .card-long__info {
   margin: 48px;
