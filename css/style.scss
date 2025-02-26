@@ -32,7 +32,7 @@ html {
 @mixin image-numbering {
     @for $i from 1 through 6 {
         &_#{$i} {
-            background-image: url("/img/card_cover_#{$i}.png");
+            background-image: url("../img/card_cover_#{$i}.png");
         }
     }
 }
@@ -305,6 +305,25 @@ a {
         height: 314px;
 
         @include image-numbering
+        
+        &_1 {
+            background-image: url("../img/card_cover_1.png");
+        }
+        &_2 {
+            background-image: url("../img/card_cover_2.png");
+        }
+        &_3 {
+            background-image: url("../img/card_cover_3.png");
+        }
+        &_4 {
+            background-image: url("../img/card_cover_4.png");
+        }
+        &_5 {
+            background-image: url("../img/card_cover_5.png");
+        }
+        &_6 {
+            background-image: url("../img/card_cover_6.png");
+        }
     }
 
     &__info {
