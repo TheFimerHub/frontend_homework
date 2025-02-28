@@ -10,16 +10,16 @@ function guessNumberGame1() {
     
     do {
         userAnswer = Number(prompt('Попробуй ввести число:'));
-
+        
         if (isNaN(userAnswer)) {
             alert('Пожалуйста, введите числовое значение');
             continue;
         }
-
+        
         if (!userAnswer) {
             break;
         }
-
+        
         if (userAnswer === randomNumber) {
             alert('Поздравляю! Ты угадал число!');
             if (confirm('Поиграем еще?')) {
@@ -27,14 +27,46 @@ function guessNumberGame1() {
             }
             break;
         }
-
+        
         const message = userAnswer < randomNumber 
         ? "Загаданное число больше." 
         : "Загаданное число меньше."
-            
+        
         alert(message);
-
+        
     } while (userAnswer !== randomNumber);
+}
+
+function generateTask() {
+    const operators = ['+', '-', '/', '*'];
+    const operatorIndex = Math.floor(Math.random() * operators.length);
+    const operator = operators[operatorIndex];
+    
+    let num1, num2, taskAnswer;
+    
+    switch(operator) {
+        case '+':
+        case '-':
+            num1 = Math.floor(Math.random() * 29) + 1;
+            num2 = Math.floor(Math.random() * 29) + 1;
+            taskAnswer = operator === '+' ? num1 + num2 : num1 - num2;
+            break;
+            
+        case '/':
+            num2 = Math.floor(Math.random() * 9) + 1;
+            num1 = num2 * (Math.floor(Math.random() * 9) + 1);
+            taskAnswer = num1 / num2;
+            break;
+            
+        case '*':
+            num1 = Math.floor(Math.random() * 9) + 1;
+            num2 = Math.floor(Math.random() * 9) + 1;
+            taskAnswer = num1 * num2;
+            break;
+    }
+    
+    const task = `${num1} ${operator} ${num2}`;
+    return [task, taskAnswer];
 }
 
 function solveTaskGame2() {
@@ -73,38 +105,6 @@ function solveTaskGame2() {
         }
 
     } while (userAnswer !== taskAnswer);
-}
-
-function generateTask() {
-    const operators = ['+', '-', '/', '*'];
-    const operatorIndex = Math.floor(Math.random() * operators.length);
-    const operator = operators[operatorIndex];
-    
-    let num1, num2, taskAnswer;
-    
-    switch(operator) {
-        case '+':
-        case '-':
-            num1 = Math.floor(Math.random() * 29) + 1;
-            num2 = Math.floor(Math.random() * 29) + 1;
-            taskAnswer = operator === '+' ? num1 + num2 : num1 - num2;
-            break;
-            
-        case '/':
-            num2 = Math.floor(Math.random() * 9) + 1;
-            num1 = num2 * (Math.floor(Math.random() * 9) + 1);
-            taskAnswer = num1 / num2;
-            break;
-            
-        case '*':
-            num1 = Math.floor(Math.random() * 9) + 1;
-            num2 = Math.floor(Math.random() * 9) + 1;
-            taskAnswer = num1 * num2;
-            break;
-    }
-    
-    const task = `${num1} ${operator} ${num2}`;
-    return [task, taskAnswer];
 }
 
 function reverseTextGame3() {
@@ -207,5 +207,55 @@ function QuizGame4() {
         QuizGame4();
     } else {
         return;
+    }
+}
+
+function RockPaperScissorsGame5() {
+    const actions = ["камень", "ножницы", "бумага"];
+
+    const startGame = confirm('Давай поиграем в камень ножницы бумага! Летс го?');
+
+    if (!startGame) {
+        return;
+    }
+
+    let randomAction = Math.floor(Math.random() * actions.length);
+
+    while (true) {
+        let userAnswer = prompt('Выбирай:\n1. Камень 2. Ножницы 3. Бумага\nНапишите варианты от 1 до 3.');
+
+        if (!userAnswer) {
+            break;
+        }
+    
+        if (isNaN(userAnswer) || userAnswer === '' || userAnswer === null) {
+            alert('Пожалуйста, введите число');
+            continue;
+        }
+    
+        if (Number(userAnswer) < 0 || Number(userAnswer) > 3) {
+            alert('Пожалуйста, введите число от 1 до 3');
+            continue;
+        }
+    
+        let userAction = userAnswer - 1;
+
+        if (userAction === randomAction) {
+            alert('У вас ничья!');
+        } else {
+            if (userAction === 0 && randomAction === 2 
+                || userAction === 1 && randomAction === 0
+                || userAction === 2 && randomAction === 1) {
+                    alert(`Вы проиграли :(\nУ вас ${actions[userAction]}, у него ${actions[randomAction]}`);
+                } else {
+                    alert(`Вы выиграли!\nУ вас ${actions[userAction]}, у него ${actions[randomAction]}`);
+                }
+        }
+
+        if (confirm('Поиграем еще?')) {
+            RockPaperScissorsGame5();
+        } else {
+            return;
+        }
     }
 }
