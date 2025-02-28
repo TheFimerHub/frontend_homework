@@ -170,37 +170,34 @@ function QuizGame4() {
     }
 
     for (task of quiz) {
-        while (true) {
-            userAnswer = prompt(
-                task.question 
-                + '\nВарианты ответов:\n' 
-                + task.options.join('\n') 
-                + '\nНапишите варианты от 1 до 3.'
-            );
-            
-            if (!userAnswer) {
-                break;
-            }
+        userAnswer = prompt(
+            task.question 
+            + '\nВарианты ответов:\n' 
+            + task.options.join('\n') 
+            + '\nНапишите варианты от 1 до 3.'
+        );
+        
+        if (!userAnswer) {
+            break;
+        }
 
-            if (isNaN(userAnswer) || userAnswer === '' || userAnswer === null) {
-                alert('Пожалуйста, введите число');
-                continue;
-            }
+        if (isNaN(userAnswer) || userAnswer === '' || userAnswer === null) {
+            alert('Пожалуйста, введите число');
+            continue;
+        }
 
-            if (Number(userAnswer) < 0 || Number(userAnswer) > 3) {
-                alert('Пожалуйста, введите число от 1 до 3');
-                continue;
-            }
+        if (Number(userAnswer) < 0 || Number(userAnswer) > 3) {
+            alert('Пожалуйста, введите число от 1 до 3');
+            continue;
+        }
 
 
-            if (Number(userAnswer) === task.correctAnswer) {
-                alert('Всё верно! Идем дальше.');
-                rightAnswers++;
+        if (Number(userAnswer) === task.correctAnswer) {
+            alert('Всё верно! Идем дальше.');
+            rightAnswers++;
 
-            } else {
-                alert('Неверно :( Правильный ответ: ' + task.options[task.correctAnswer - 1]);
-            }
-            break
+        } else {
+            alert('Неверно :( Правильный ответ: ' + task.options[task.correctAnswer - 1]);
         }
     }
 
