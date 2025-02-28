@@ -236,28 +236,11 @@ a {
   transition: all 0.3s ease-in-out;
 }
 .card__img {
+  width: 100%;
   border-radius: 30px;
   background-repeat: no-repeat;
   background-size: cover;
   height: 314px;
-}
-.card__img_1 {
-  background-image: url("/img/card_cover_1.png");
-}
-.card__img_2 {
-  background-image: url("/img/card_cover_2.png");
-}
-.card__img_3 {
-  background-image: url("/img/card_cover_3.png");
-}
-.card__img_4 {
-  background-image: url("/img/card_cover_4.png");
-}
-.card__img_5 {
-  background-image: url("/img/card_cover_5.png");
-}
-.card__img_6 {
-  background-image: url("/img/card_cover_6.png");
 }
 .card__info {
   margin: 32px;
@@ -299,29 +282,12 @@ a {
   margin: 48px;
 }
 .card-long__img {
+  width: 100%;
   border-radius: 30px;
   background-repeat: no-repeat;
   background-size: cover;
   height: 500px;
   width: 100%;
-}
-.card-long__img_1 {
-  background-image: url("/img/card_cover_1.png");
-}
-.card-long__img_2 {
-  background-image: url("/img/card_cover_2.png");
-}
-.card-long__img_3 {
-  background-image: url("/img/card_cover_3.png");
-}
-.card-long__img_4 {
-  background-image: url("/img/card_cover_4.png");
-}
-.card-long__img_5 {
-  background-image: url("/img/card_cover_5.png");
-}
-.card-long__img_6 {
-  background-image: url("/img/card_cover_6.png");
 }
 .card-long__content {
   display: grid;
@@ -589,29 +555,12 @@ a {
     margin-bottom: 32px;
   }
   .card-long__img {
+    width: 100%;
     border-radius: 30px;
     background-repeat: no-repeat;
     background-size: cover;
     height: 285px;
     width: 100%;
-  }
-  .card-long__img_1 {
-    background-image: url("/img/card_cover_1.png");
-  }
-  .card-long__img_2 {
-    background-image: url("/img/card_cover_2.png");
-  }
-  .card-long__img_3 {
-    background-image: url("/img/card_cover_3.png");
-  }
-  .card-long__img_4 {
-    background-image: url("/img/card_cover_4.png");
-  }
-  .card-long__img_5 {
-    background-image: url("/img/card_cover_5.png");
-  }
-  .card-long__img_6 {
-    background-image: url("/img/card_cover_6.png");
   }
   .card-long__content {
     display: flex;

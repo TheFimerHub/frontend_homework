@@ -17,7 +17,7 @@ function guessNumberGame1() {
         }
 
         if (!userAnswer) {
-            break
+            break;
         }
 
         if (userAnswer === randomNumber) {
@@ -57,7 +57,7 @@ function solveTaskGame2() {
         }
 
         if (!userAnswer) {
-            break
+            break;
         }
 
         if (userAnswer === taskAnswer) {
@@ -68,7 +68,7 @@ function solveTaskGame2() {
             break;
         } else {
             if (!confirm('Неверно( Попробуешь ещё?')) {
-                break
+                break;
             }
         }
 
@@ -105,4 +105,107 @@ function generateTask() {
     
     const task = `${num1} ${operator} ${num2}`;
     return [task, taskAnswer];
+}
+
+function reverseTextGame3() {
+    const startGame = confirm('Вы вводите текст, а мы его переворачиваем! Погнали?');
+
+    if (!startGame) {
+        return;
+    }
+
+    while (true) {
+        userText = prompt('Введите текст:');
+
+        if (userText === '' || userText === null) {
+            alert('Пожалуйста, введите текст');
+            continue;
+        }
+
+        if (!userText) {
+            break;
+        }
+
+        reverseText = String(userText).split('').reverse().join('');
+
+        alert('Вот ваше перевернутое слово: ' + reverseText);
+
+        if (confirm('Поиграем еще?')) {
+            reverseTextGame3();
+        } else {
+            return;
+        }
+
+    }
+
+    
+}
+
+function QuizGame4() {
+    const quiz = [
+        {
+            question: "Какой цвет неба?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+
+    const startGame = confirm('Давай пройдем викторину! Играем?');
+
+    let userAnswer;
+    let rightAnswers = 0;
+
+    if (!startGame) {
+        return;
+    }
+
+    for (task of quiz) {
+        userAnswer = prompt(
+            task.question 
+            + '\nВарианты ответов:\n' 
+            + task.options.join('\n') 
+            + '\nНапишите варианты от 1 до 3.'
+        );
+        
+        if (!userAnswer) {
+            break;
+        }
+
+        if (isNaN(userAnswer) || userAnswer === '' || userAnswer === null) {
+            alert('Пожалуйста, введите число');
+            continue;
+        }
+
+        if (Number(userAnswer) < 0 || Number(userAnswer) > 3) {
+            alert('Пожалуйста, введите число от 1 до 3');
+            continue;
+        }
+
+
+        if (Number(userAnswer) === task.correctAnswer) {
+            alert('Всё верно! Идем дальше.');
+            rightAnswers++;
+
+        } else {
+            alert('Неверно :( Правильный ответ: ' + task.options[task.correctAnswer - 1]);
+        }
+    }
+
+    alert(`Вы ответили правильно на ${rightAnswers} из 3 вопросов.`)
+
+    if (confirm('Поиграем еще?')) {
+        QuizGame4();
+    } else {
+        return;
+    }
 }
