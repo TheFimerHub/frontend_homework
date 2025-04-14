@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="description">1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, repudiandae.</p>
+    <p class="description">2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, repudiandae.</p>
+    <p class="description">3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, repudiandae.</p>
+    <p class="description">4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, repudiandae.</p>
+    <p class="description">5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, repudiandae.</p>
+    <button class="btn">Удалить 1 элемент</button>
+    <script>
+        const btn = document.querySelector('.btn')
+        btn.addEventListener('click', () => {
+            document.querySelector('.description').remove()
+        });
+    </script>
+</body>
+</html>

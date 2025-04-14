@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color-blue {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae porro ea recusandae.</p>
+    <button id="btn">Hide</button>
+    <script>
+        const pEl = document.querySelector('.text');
+        const btn = document.querySelector('#btn');
+        btn.addEventListener('click', () => {
+            pEl.classList.toggle('color-blue');
+        });
+    </script>
+</body>
+</html>
