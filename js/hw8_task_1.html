@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="hideBtn">Hide</button>
+    <script>
+        const h1El = document.querySelector('h1');
+        const hideBtn = document.querySelector('#hideBtn');
+        hideBtn.addEventListener('click', () => {
+            h1El.classList.toggle('hide');
+        });
+    </script>
+</body>
+</html>
