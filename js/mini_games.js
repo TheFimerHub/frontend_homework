@@ -141,7 +141,7 @@ function reverseTextGame3() {
     
 }
 
-function QuizGame4() {
+function quizGame4() {
     const quiz = [
         {
             question: "Какой цвет неба?",
@@ -204,13 +204,13 @@ function QuizGame4() {
     alert(`Вы ответили правильно на ${rightAnswers} из 3 вопросов.`)
 
     if (confirm('Поиграем еще?')) {
-        QuizGame4();
+        quizGame4();
     } else {
         return;
     }
 }
 
-function RockPaperScissorsGame5() {
+function rockPaperScissorsGame5() {
     const actions = ["камень", "ножницы", "бумага"];
 
     const startGame = confirm('Давай поиграем в камень ножницы бумага! Летс го?');
@@ -253,9 +253,26 @@ function RockPaperScissorsGame5() {
         }
 
         if (confirm('Поиграем еще?')) {
-            RockPaperScissorsGame5();
+            rockPaperScissorsGame5();
         } else {
             return;
         }
     }
 }
+
+function getRandomColor() {
+    const letters = '0123456789ABCDEF'
+    let color = '#'
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)]
+    }
+    return color
+}
+
+function changeBgColorGame6() {
+    const aboutSection = document.querySelector('.about');
+    const mgamesSection = document.querySelector('.mgames');
+    let randomColor = getRandomColor();
+    aboutSection.style.backgroundColor = randomColor
+    mgamesSection.style.backgroundColor = randomColor
+};
